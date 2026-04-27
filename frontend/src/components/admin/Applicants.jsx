@@ -15,7 +15,8 @@ const Applicants = () => {
     useEffect(() => {
         const fetchAllApplicants = async () => {
             try {
-                const res = await axios.get(`${JOB_API_END_POINT}/get/${params.id}`, {withCredentials:true});
+                // const res = await axios.get(`${JOB_API_END_POINT}/get/${params.id}`, {withCredentials:true});
+                const res = await axios.get(`${APPLICATION_API_END_POINT}/${params.id}/applicant`, {withCredentials:true});
                 dispatch(setAllApplicants(res.data.job.applications));
             } catch (error) {
                 console.log(error);

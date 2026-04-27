@@ -44,10 +44,10 @@ const ApplicantsTable = () => {
                 applicants && applicants?.map((item) => (
 
                     <TableRow key={item._id}>
-                        <TableCell>{item?.applicant?.fullname}</TableCell>
-                        <TableCell>{item?.applicant?.email}</TableCell>
-                        <TableCell>{item?.applicant?.phoneNumber}</TableCell>
-                        <TableCell className='text-blue-600 cursor-pointer'>{item?.applicant?.profile?.resume ? (<a href={item?.applicant?.profile?.resume} target="_blank"> {item?.applicant?.profile?.resumeOriginalName || "View Resume"} </a>) : (<span className='text-gray-400'>No resume available</span>)}</TableCell>
+                        <TableCell>{item.applicant?.fullname}</TableCell>
+                        <TableCell>{item.applicant?.email}</TableCell>
+                        <TableCell>{item.applicant?.phoneNumber}</TableCell>
+                        <TableCell className='text-blue-600 cursor-pointer'>{item.applicant?.profile?.resume ? (<a href={item.applicant.profile.resume} target="_blank"> {item.applicant.profile.resumeOriginalName || "View Resume"} </a>) : (<span className='text-gray-400'>No resume available</span>)}</TableCell>
                         <TableCell>{item?.createdAt.split("T")[0]}</TableCell>
                         <TableCell className='float-right cursor-pointer'>
                             <Popover>

@@ -51,7 +51,8 @@ const CompanySetup = () => {
       setLoading(true);
       const res = await axios.put(`${COMPANY_API_END_POINT}/update/${params.id}`, formData, {
         headers:{
-          'Content-Type':'application/json'
+          // 'Content-Type':'application/json'
+          'Content-Type':'multipart/form-data'
         },
         withCredentials:true
       });
@@ -80,7 +81,7 @@ const CompanySetup = () => {
   return (
     <div>
       <Navbar />
-      <duv className='min-h-[calc(100vh-80px)] flex items-center justify-center'>
+      <div className='min-h-[calc(100vh-80px)] flex items-center justify-center'>
         <form onSubmit={submitHandler}>
           <div className='w-105 p-6 bg-white'>
             <div className='flex items-center justify-center gap-3 mb-6'>
@@ -117,7 +118,7 @@ const CompanySetup = () => {
               loading ? <Button className='w-full my-4'> <Loader2 className='mr-2 h-4 w-4 animate-spin'/> Please Wait</Button> : <Button type='submit' className='w-full my-4'>Update</Button>
           }
         </form>
-      </duv>
+      </div>
     </div>
   )
 }
