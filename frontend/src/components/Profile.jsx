@@ -23,18 +23,6 @@ const Profile = () => {
         <div className='max-w-4xl mx-auto bg-white border border-gray-200 rounded-2xl my-5 p-8'>
             <div className='flex justify-between'>
                 <div className='flex items-center gap-4'>
-                    {/* <Avatar className='h-24 w-24'>
-                        {user?.profile?.profilePhoto ? (
-                            <AvatarImage 
-                                src={user.profile.profilePhoto} 
-                                alt={user?.fullname} 
-                            />
-                        ) : (
-                            <AvatarFallback>
-                                {user?.fullname?.charAt(0)}
-                            </AvatarFallback>
-                        )}
-                    </Avatar> */}
                     <Avatar className="h-24 w-24">
                         <AvatarImage src={user?.profile?.profilePhoto || ""} />
                         <AvatarFallback>
