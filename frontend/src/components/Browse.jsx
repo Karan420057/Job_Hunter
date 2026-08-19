@@ -23,7 +23,7 @@ const Browse = () => {
     <Navbar />
 
     {/* Main content grows */}
-    <div className="flex-grow max-w-7xl mx-auto my-10 px-10">
+    <div className="grow max-w-7xl mx-auto my-10 px-10">
       <h1 className="font-bold text-xl my-10">
         Search Results ({allJobs.length})
       </h1>
